@@ -1,34 +1,19 @@
 import React from 'react'
+import Card from '../Card/Card'
 
 const CardGroup = () => {
+    const products = [
+        { id: 1, name: 'laptop pro', price: 125000 },
+        { id: 2, name: 'laptop cro', price: 1344343 },
+        { id: 3, name: 'laptop gro', price: 234423 }
+    ]
     return (
         <div>
             <h1>This is my card</h1>
             <div className="card-group">
-                <div className="card">
-                    <img src="..." className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div className="card">
-                    <img src="..." className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-                <div className="card">
-                    <img src="..." className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Card title</h5>
-                        <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                        <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
+                {
+                    products.map(product => <Card key={product.id} product={product}></Card>)
+                }
             </div>
         </div>
     )

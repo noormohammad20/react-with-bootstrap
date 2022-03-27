@@ -1,5 +1,5 @@
 import './App.css'
-import CardGroup from './components/CardGroup'
+import CardGroup from './components/CardGroup/CardGroup'
 
 function App() {
   return (
