@@ -3,7 +3,7 @@ import './App.css'
 import CardGroup from './components/CardGroup/CardGroup'
 import CardGroup2 from './components/CardGroup2/CardGroup2'
 
-function App({ product }) {
+function App() {
   return (
     <div className="App">
       <CardGroup></CardGroup>
